@@ -1,0 +1,4 @@
+interface:
+  display_name: "小红书爆款学习"
+  short_description: "采集小红书链接，拆解爆款机制并沉淀候选规则与原创选题"
+  default_prompt: "Use $xhs-hot-learning to process new Xiaohongshu links, build evidence-based analyses, and save candidate rules."
