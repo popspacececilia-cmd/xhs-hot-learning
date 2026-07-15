@@ -1,11 +1,11 @@
 ---
 name: xhs-hot-learning
-description: Analyze pre-collected Xiaohongshu breakout-post, benchmark-note, and creator-profile packages through a reusable evidence-first workflow. Use when Codex needs to match upstream Lingzao results to an XHS inbox, identify note versus profile packages, select up to 10 account-relevant high-performing posts from provided creator data, build text/image/video/data fact sheets, analyze title-content mechanisms, separate observations from inferences, generate account-specific transfer ideas and candidate rules, hand results to a personal account-operation skill, or update a source record from 待处理 to 已处理 only after successful persistence. This skill consumes existing collection results and must not call Lingzao itself.
+description: Analyze pre-collected Xiaohongshu breakout-post, benchmark-note, and creator-profile packages across any content niche through a reusable evidence-first workflow. Use when Codex needs to match upstream Lingzao results to an XHS inbox, identify note versus profile packages, select up to 10 target-account-relevant high-performing posts from provided creator data, build text/image/video/data fact sheets, analyze copy and title-content mechanisms, separate observations from inferences, generate target-account-specific transfer ideas and candidate rules, hand results to a personal account-operation skill, or update a source record from 待处理 to 已处理 only after successful persistence. This skill consumes existing collection results, derives niche relevance from the target account context, and must not call Lingzao itself.
 ---
 
 # 小红书爆款学习
 
-把用户主动收集、且已由上游完成采集的小红书素材包转换成可追溯的事实底稿、机制判断、原创迁移建议和候选规则。不要把“爆款”理解成结果保证；本 skill 学习公开样本，不承诺复制数据表现。
+把用户主动收集、且已由上游完成采集的小红书素材包转换成可追溯的事实底稿、文案与内容机制判断、原创迁移建议和候选规则。适用于所有赛道；赛道相关性必须从目标账号资料读取，不在通用 skill 中写死。不要把“爆款”理解成结果保证；本 skill 学习公开样本，不承诺复制数据表现。
 
 ## 核心分层
 
