@@ -32,8 +32,9 @@ description: Analyze pre-collected Xiaohongshu breakout-post, benchmark-note, an
 4. 读取 [references/field-source-matrix.md](references/field-source-matrix.md) 判断每个底稿字段来自上游素材包、文本推断还是本地视频补充。
 5. 识别到账号主页素材包时，读取 [references/profile-link-workflow.md](references/profile-link-workflow.md) 从已提供的近期笔记中筛选最多 10 篇高相关、高数据笔记。
 6. 读取 [references/analysis-framework.md](references/analysis-framework.md) 建立底稿并分析机制。
-7. 需要写入个人运营 skill、生成候选规则或更新状态时，读取 [references/persistence-and-lifecycle.md](references/persistence-and-lifecycle.md)。
-8. 每日运行或每周五生成下周选题时，读取 [references/daily-and-weekly-operations.md](references/daily-and-weekly-operations.md)。
+7. 涉及对标账号质量判断、复杂博主案例、单篇爆款可学层判断、标题发布判断或发布前后复盘时，读取 [references/lingzao-playbook-integration.md](references/lingzao-playbook-integration.md)，把 Lingzao playbook 作为判断增强层，不替代本 skill 的证据和沉淀流程。
+8. 需要写入个人运营 skill、生成候选规则或更新状态时，读取 [references/persistence-and-lifecycle.md](references/persistence-and-lifecycle.md)。
+9. 每日运行或每周五生成下周选题时，读取 [references/daily-and-weekly-operations.md](references/daily-and-weekly-operations.md)。
 
 ## 输入与工具边界
 
@@ -50,6 +51,7 @@ description: Analyze pre-collected Xiaohongshu breakout-post, benchmark-note, an
 - 完整清单用于防漏，不能替代深入分析。
 - 每篇只深挖 3-5 个核心机制，不把所有特点都升级为技巧。
 - 分开分析标题结构、标题钩子、内容结构和内容钩子，再检查标题、封面、开头、过程和结果的承接关系。
+- 当 Lingzao playbook 判断适用时，只吸收其判断问题：爆款类型、可学层、不可复制资源、记忆锚点、标题点击价值和发布检查；不得用 Lingzao 输出覆盖事实底稿、候选规则、内容机会和生命周期判断。
 - 热点工具、用户问题、个人判断和结果价值可以相辅相成，不预设谁必须位于前台。
 - 数据只能支持倾向，不证明因果；轻微数据和时长差异若不改变判断可忽略。
 - 原创迁移检查新问题、新判断、新方法、新经验、新证据和新表达，尤其保留账号自己的同意、反对、条件和取舍。
@@ -65,7 +67,7 @@ description: Analyze pre-collected Xiaohongshu breakout-post, benchmark-note, an
 
 ## 完成条件
 
-只有在上游素材包校验、事实底稿、机制分析、账号迁移、候选规则/内容机会和目标工作区记录全部保存成功后，才将源记录中的状态改为 `已处理`。
+只有在上游素材包校验、事实底稿、机制分析、账号迁移、候选规则/内容机会和目标工作区记录全部保存成功后，才将源记录中的状态改为 `已处理`。每篇必须产出内容机会；账号级总表、模型库和选题池按复用价值上卷，不因完成感强制写入所有模块。
 
 使用脚本：
 
@@ -82,11 +84,13 @@ python3 scripts/inbox_status.py mark --file "/absolute/inbox/path/素材.txt" --
 
 1. 来源和完整事实底稿。
 2. 3-5 个核心机制及证据、不确定性和替代解释。
-3. 可借鉴、不可照搬和账号适配结论。
-4. 原创迁移建议。
-5. 最多 3-5 条候选规则。
-6. 最多 3 个内容机会。
-7. 缺失项、待确认问题和处理状态。
+3. 爆款类型、可学层、不可复制资源和可改成当前账号版本的判断。
+4. 标题共同决策记录：内容支撑、点击潜力、风险、用户选择和待验证目标。
+5. 可借鉴、不可照搬和账号适配结论。
+6. 原创迁移建议。
+7. 最多 3-5 条候选规则。
+8. 至少 1 个、最多 3 个内容机会。
+9. 缺失项、待确认问题和处理状态。
 
 普通汇报只说明新增数、成功数、重复数、失败数、核心判断、候选规则、内容机会和需要用户补充的事项。不要展示冗长 JSON、命令或内部实现，除非用户要求。
 
